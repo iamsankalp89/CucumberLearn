@@ -7,16 +7,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/AppFeatures/Search.feature"},       //Path of feature file
-        glue = {"stepDefinations","myHooks"},            //path of Stepdefinations and hooks
+        features = {"src/test/resources/AppFeatures/Registration.feature"},       //Path of feature file
+        glue = {"stepDefinations"},            //path of Step defination and hooks
         plugin = {"pretty",             //Formatting
                     "json:target/Report/MyJsonReport.json",
                     "junit:target/Report/MyXMLReport.xml"}  ,
        //publish = true,
-        tags="@Smoke or @Regression",
-        monochrome=true,
-        dryRun = true
+        monochrome=false,
+        dryRun = false
 )
-public class AmazonTest {
+public class RegistrationTest {
 
 }
